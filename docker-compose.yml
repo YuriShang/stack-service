@@ -1,0 +1,19 @@
+#docker-compose.yml
+services:
+  stack_service:
+    build:
+      context: "."
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    restart: always
+  db:
+    image: postgres 
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_DB: testdb
+      POSTGRES_PASSWORD: P@ssw0rd
+    restart: always

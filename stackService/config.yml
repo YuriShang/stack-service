@@ -1,0 +1,12 @@
+---
+
+is_debug: true
+listen:
+  bind_ip: 0.0.0.0
+  port: 8000
+postgresql:
+  host: localhost
+  port: 5432
+  username: testuser
+  password: P@ssw0rd
+  database: testdb
